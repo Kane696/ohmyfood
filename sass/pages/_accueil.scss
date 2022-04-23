@@ -1,0 +1,129 @@
+@import "../utils/variables";
+
+.accueil{
+    
+
+    @include mobile-only{
+        #localisation{
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #eaeaea;
+        }
+
+        #banner{
+            background-color: $light-gray;
+            padding: 30px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            h1{
+                font-size: 2.8rem;
+                margin-bottom: 18px;
+            }
+            p{
+                font-size: 1.8rem;
+                font-weight: lighter;
+                margin-bottom: 25px;
+            }
+        }
+
+        #fonctionnement{
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+            padding: 10% 5%;
+
+            h2{
+                font-size: 2.8rem;
+                margin-bottom: 20px;
+            }
+            .fonctionnement-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                .card-fonctionnement{
+                    background-color: $light-gray;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    height: 30%;
+                    border-radius: 20px;
+                    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+                    position: relative;
+                    .card-fonctionnement__circle{
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $primary-color;
+                        border-radius: 50%;
+                        color: white;
+                        position: absolute;
+                        left: -10px;
+                        
+                    }
+                    i{
+                        color: #4449;
+                        &:hover{
+                            color: $primary-color;
+                        }
+                    }
+                    p{
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        #restaurants{
+            padding: 10% 5%;
+            background-color: $light-gray;
+            h2{
+                font-size: 2.8rem;
+                margin-bottom: 20px;
+            }
+            .restaurants-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 25px;
+                .card-restaurant{
+                    background-color: white;
+                    border-radius: 15px;
+                    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+                    .card-restaurant__img{
+                        height: 170px;
+                        position: relative;
+                        overflow: hidden;
+                        border-top-left-radius: 15px;
+                        border-top-right-radius: 15px;
+    
+                        img{
+                            width: 100%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+
+                    .card-restaurant__body{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 20px 15px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+}

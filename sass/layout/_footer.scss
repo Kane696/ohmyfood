@@ -1,0 +1,22 @@
+footer{
+    background-color: $dark-gray;
+    // height: 15rem;
+    padding: 5%;
+
+    #footer-logo img{
+        width: 125px;
+        margin-bottom: 15px;
+    }
+
+    ul{
+        line-height: 1.5;
+        li{
+            i{
+                color: white;
+            }
+            a{
+                color: white;
+            }
+        }
+    }
+}
