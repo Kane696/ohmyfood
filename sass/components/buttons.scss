@@ -27,6 +27,47 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #068b6a;
+    color: #486d64;
     font-weight: bold;
+}
+
+.card-menu__btn{
+    position: absolute;
+    right: 0%;
+    display: none;
+    background-color: $tertiary-color;
+    height: 100%;
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    // margin-left: 15px;
+    animation: slidein .3s forwards;
+    i{
+        color: white;
+        --fa-animation-duration: .7s;
+        --fa-animation-iteration-count: 1;
+    }
+}
+
+
+@keyframes slidein {
+    0%{
+        width: 0%;
+    }
+
+    25%{
+        width: 5%;
+    }
+
+    50%{
+        width: 10%;
+    }
+
+    75%{
+        width: 15%;
+    }
+
+    100%{
+        width: 20%;
+    }
 }

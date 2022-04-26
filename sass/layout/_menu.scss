@@ -1,0 +1,90 @@
+.banner{
+    position: relative;
+    img{
+        width: 100%;
+        height: 300px;
+    }
+}
+
+.menu-restaurant{
+    height: calc(100vh - 7rem + 20rem);
+    .menu{
+        background-color: $light-gray;
+        width: 100%;
+        padding: 20px 5%;
+        position: absolute;
+        top: 300px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        .menu-header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .entrees{
+            height: 350px;
+            padding: 20px 0px;
+            .entrees-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                height: 90%;
+                .card-menu{
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: white;
+                    border-radius: 15px;
+                    height: 27%;
+                    padding: 0px 0px 0px 12px;
+                    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+                    &:hover{
+                        .card-menu__btn{
+                            display: block;
+                        }
+                        .card-menu__plat{
+                            animation: slideoff .3s forwards ease;
+                            .card-top{
+                                p:first-child{
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+    
+                        @keyframes slideoff {
+                            0%{
+                                width: 90%;
+                            }
+                            25%{
+                                width: 87.5%
+                            }
+                            50%{
+                                width: 85%
+                            }
+                        
+                            75%{
+                                width: 82.5%
+                            }
+                            100%{
+                                width: 80%;
+                            }
+                        }
+                    }
+                    .card-menu__plat{
+                        display: flex;                    
+                        flex-direction: column;
+                        justify-content: center;
+                        width: 90%;
+                        .card-top{
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
