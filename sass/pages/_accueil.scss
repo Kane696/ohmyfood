@@ -1,15 +1,16 @@
 @import "../utils/variables";
 
 .accueil{
-    
-
-    @include mobile-only{
+    // @include mobile-only{
         #localisation{
             height: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #eaeaea;
+            i{
+                margin-right: 10px;
+            }
         }
 
         #banner{
@@ -22,7 +23,7 @@
             align-items: center;
             text-align: center;
             h1{
-                font-size: 2.8rem;
+                // font-size: 2.8rem;
                 margin-bottom: 18px;
             }
             p{
@@ -32,11 +33,40 @@
             }
         }
 
+        #loader{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            line-height: 100vh;
+            background-color: #fff;
+            animation: 2s loader forwards;
+            animation-duration: 2s;
+            z-index: 9999;
+            i{
+                --fa-animation-duration: 2s;
+                --fa-animation-iteration-count: 1;
+            }
+
+            @keyframes loader {
+                0%{
+                    opacity: 1;
+                } 
+                50%{
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 0;
+                    z-index: -1;
+                }
+            }
+        }
+
         #fonctionnement{
             display: flex;
             flex-direction: column;
             height: 400px;
-            padding: 10% 5%;
+            padding: 50px 20px;
 
             h2{
                 font-size: 2.8rem;
@@ -56,7 +86,10 @@
                     border-radius: 20px;
                     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
                     position: relative;
-                    .card-fonctionnement__circle{
+                    &:hover{
+                        background-color: $primary-color;
+                    }
+                    &__circle{
                         width: 30px;
                         height: 30px;
                         display: flex;
@@ -70,36 +103,50 @@
                         left: -10px;
                         
                     }
-                    i{
-                        color: #4449;
-                        &:hover{
-                            color: $primary-color;
+                    &__text{
+                        display: flex;
+                        justify-content: center;
+                        i{
+                            color: #4449;
+                            &:hover{
+                                color: $primary-color;
+                            }
+                        }
+                        p{
+                            font-weight: 600;
+                            text-align: center;
+                            width: 250px;
                         }
                     }
-                    p{
-                        font-weight: 600;
-                    }
+                    
                 }
             }
         }
 
         #restaurants{
-            padding: 10% 5%;
+            padding: 50px 20px;
             background-color: $light-gray;
             h2{
                 font-size: 2.8rem;
                 margin-bottom: 20px;
             }
             .restaurants-container{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                gap: 25px;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: space-between;
+                min-height: 300px;
+                // gap: 25px;
                 .card-restaurant{
                     background-color: white;
                     border-radius: 15px;
-                    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-                    .card-restaurant__img{
+                    box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
+                    margin-bottom: 20px;
+                    transition: all .3s ease-in-out;
+                    &:hover{
+                        transform: scale(1.009);
+                        box-shadow: 0 10px 15px -3px rgb(0 0 0 / .3), 0 4px 6px -4px rgb(0 0 0 / .3);
+                    }
+                    &__img{
                         height: 170px;
                         position: relative;
                         overflow: hidden;
@@ -114,16 +161,32 @@
                             transform: translate(-50%, -50%);
                         }
                     }
-
-                    .card-restaurant__body{
+                    &__body{
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         padding: 20px 15px;
                         line-height: 1.5;
                     }
+                    &__icon i{
+                        font-weight: lighter;
+                        font-size: 3rem;
+                        transition: all .2s ease-in-out;
+                        &:hover{
+                            font-weight: bolder;
+                            background: linear-gradient($primary-color, $secondary-color);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
                 }
             }
+        }
+    // }
+    @include desktop-only{
+        .restaurants-container{
+            display: flex;
+            justify-content: space-between;
         }
     }
 }

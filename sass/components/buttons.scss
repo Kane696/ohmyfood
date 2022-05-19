@@ -1,16 +1,22 @@
 @import "../utils/variables";
 
 .btn{
+    display: block;
+    margin: 0px auto;
     background: linear-gradient(180deg, rgba(255,121,218,1) 4%, rgba(200,103,219,1) 61%, rgba(147,86,220,1) 85%);
     border-radius: 50px;
     color: white;
     padding: 17px 23px;
     font-size: 1.8rem;
+    text-align: center;
     font-weight: bold;
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
     cursor: pointer;
+    transition: opacity .4s;
     &:hover{
-        background: linear-gradient(180deg, rgba(255,121,218,.8) 4%, rgba(200,103,219,.8) 61%, rgba(147,86,220,.8) 85%);
+        opacity: 0.8;
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / .2), 0 8px 10px -6px rgb(0 0 0 / .2);
+        // background: linear-gradient(180deg, rgba(255,121,218,.8) 4%, rgba(200,103,219,.8) 61%, rgba(147,86,220,.8) 85%);
     }
 }
 
@@ -40,9 +46,9 @@
     border: none;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    // margin-left: 15px;
     animation: slidein .3s forwards;
     i{
+        font-size: 20px;
         color: white;
         --fa-animation-duration: .7s;
         --fa-animation-iteration-count: 1;

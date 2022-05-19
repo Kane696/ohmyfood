@@ -25,26 +25,58 @@
         .entrees{
             height: 350px;
             padding: 20px 0px;
+            height: 100%;
+            h2{
+                font-weight: lighter;
+                font-size: 1.7rem;
+                border-bottom: 3px solid $tertiary-color;
+                padding-bottom: 3px;
+                width: 40px;
+                margin-bottom: 20px;
+            }
             .entrees-container{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
-                height: 90%;
                 .card-menu{
                     position: relative;
                     display: flex;
                     justify-content: space-between;
                     background-color: white;
                     border-radius: 15px;
-                    height: 27%;
+                    margin-bottom: 15px;
+                    height: 70px;
                     padding: 0px 0px 0px 12px;
                     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+                    animation: .5s forwards fadein;
+                    opacity: 0;
+                    &:nth-child(1){
+                        animation-delay:.5s;
+                    }
+                    &:nth-child(2){
+                        animation-delay: .7s;
+                    }
+                    &:nth-child(3){
+                        animation-delay: .9s;
+                    }
+                    @keyframes fadein {
+                        from {
+                            opacity: 0;
+                        } 
+                        to {
+                            opacity: 1;
+                        }
+                    }
                     &:hover{
                         .card-menu__btn{
                             display: block;
                         }
                         .card-menu__plat{
-                            animation: slideoff .3s forwards ease;
+                            animation: slideoff .3s forwards;
+                            h3{
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis; 
+                            }
                             .card-top{
                                 p:first-child{
                                     white-space: nowrap;
@@ -77,14 +109,22 @@
                         display: flex;                    
                         flex-direction: column;
                         justify-content: center;
-                        width: 90%;
+                        width: 100%;
+                        padding-right: 20px;
                         .card-top{
                             display: flex;
                             justify-content: space-between;
+                            p:first-child{
+                                font-size: 1.4rem;
+                                font-weight: lighter;
+                            }
                         }
                     }
                 }
             }
         }
+    }
+    .menu-book__btn{
+        width: 160px;
     }
 }

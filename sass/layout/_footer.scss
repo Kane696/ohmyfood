@@ -1,10 +1,10 @@
 footer{
-    position: fixed;
-    bottom: 0%;
+    // position: fixed;
+    // bottom: 0%;
     width: 100%;
     background-color: $dark-gray;
     height: 20rem;
-    padding: 5%;
+    padding: 30px;
 
     #footer-logo img{
         width: 125px;
@@ -14,11 +14,12 @@ footer{
     ul{
         line-height: 1.5;
         li{
-            i{
+            i,a{
                 color: white;
+                font-weight: 600;
             }
-            a{
-                color: white;
+            i{
+                margin-right: 8px;
             }
         }
     }

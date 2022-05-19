@@ -1,13 +1,7 @@
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6{
-//     font-family: 'Shrikhand', cursive;
-// }
+@import "../utils/variables";
+
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: $roboto-sans;
 }
 

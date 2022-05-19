@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/normalize.css">
+    <!-- <link rel="stylesheet" href="public/css/normalize.css"> -->
     <link rel="stylesheet" href="public/css/style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,7 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap" rel="stylesheet">
     <title>ohmyfood</title>
 </head>
-<body>
+<body class="accueil">
+    <div id="loader" class="fa-9x">
+        <i class="fa-solid fa-spinner fa-spin"></i>
+    </div>
     <header>
         <a href="#" id="logo">
             <img src="./public/images/logo/ohmyfood.png" alt="ohmyfood logo">
@@ -26,32 +29,38 @@
         <section id="banner">
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, séléctionnées par nos soins.</p>
-            <a href="#" class="btn">Explorer nos restaurants</a>
+            <a href="#restaurants" class="btn">Explorer nos restaurants</a>
         </section>
         <section id="fonctionnement">
             <h2>Fonctionnement</h2>
             <div class="fonctionnement-container">
                 <div class="card-fonctionnement">
                     <span class="card-fonctionnement__circle">1</span>
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <p>Choisissez un restaurant</p>
+                    <div class="card-fonctionnement__text">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>Choisissez un restaurant</p>
+                    </div>
                 </div>
                 <div class="card-fonctionnement">
                     <span class="card-fonctionnement__circle">2</span>
-                    <i class="fa-solid fa-list"></i>
-                    <p>Composez votre menu</p>
+                    <div class="card-fonctionnement__text">
+                        <i class="fa-solid fa-list"></i>
+                        <p>Composez votre menu</p>
+                    </div>
                 </div>
                 <div class="card-fonctionnement">
                     <span class="card-fonctionnement__circle">3</span>
-                    <i class="fa-solid fa-store"></i>
-                    <p>Dégustez un restaurant</p>
+                    <div class="card-fonctionnement__text">
+                        <i class="fa-solid fa-store"></i>
+                        <p>Dégustez un restaurant</p>
+                    </div>
                 </div>
             </div>
         </section>
         <section id="restaurants">
             <h2>Restaurants</h2>
             <div class="restaurants-container">
-                <a href="la-palette-du-gout.html" class="card-restaurant__link">
+                <a href="la-palette-du-gout.html">
                     <div class="card-restaurant">
                         <div class="card-restaurant__img">
                             <span class="new-pastille">Nouveau</span>
@@ -62,13 +71,13 @@
                                 <h3>La palette du goût</h3>
                                 <p>Ménilmontant</p>
                             </div>
-                            <div>
+                            <div class="card-restaurant__icon">
                                 <i class="fa-solid fa-heart"></i>
                             </div>
                         </div>
                     </div>
                 </a>
-                <a href="la-note-enchantee.html" class="card-restaurant__link">
+                <a href="la-note-enchantee.html">
                     <div class="card-restaurant">
                         <div class="card-restaurant__img">
                             <span class="new-pastille">Nouveau</span>
@@ -79,13 +88,13 @@
                                 <h3>La note enchantée</h3>
                                 <p>Charonne</p>
                             </div>
-                            <div>
+                            <div class="card-restaurant__icon">
                                 <i class="fa-solid fa-heart"></i>
                             </div>
                         </div>
                     </div>
                 </a>
-                <a href="a-la-francaise.html" class="card-restaurant__link">
+                <a href="a-la-francaise.html">
                     <div class="card-restaurant">
                         <div class="card-restaurant__img">
                             <img src="./public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant à la française à la Cité Rouge">
@@ -95,13 +104,13 @@
                                 <h3>A la française</h3>
                                 <p>Cité Rouge</p>
                             </div>
-                            <div>
+                            <div class="card-restaurant__icon">
                                 <i class="fa-solid fa-heart"></i>
                             </div>
                         </div>
                     </div>
                 </a>
-                <a href="le-delice-des-sens.html" class="card-restaurant__link">
+                <a href="le-delice-des-sens.html">
                     <div class="card-restaurant">
                         <div class="card-restaurant__img">
                             <img src="./public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Restaurant le délice des sens à la Folie-Méricourt">
@@ -111,7 +120,7 @@
                                 <h3>Le délice des sens</h3>
                                 <p>Folie-Méricourt</p>
                             </div>
-                            <div>
+                            <div class="card-restaurant__icon">
                                 <i class="fa-solid fa-heart"></i>
                             </div>
                         </div>
@@ -123,7 +132,7 @@
     <footer>
         <!-- <div> -->
             <a href="#" id="footer-logo">
-                <img src="./public/images/logo/ohmyfood@2x.svg" style="color: white;" alt="ohmyfood logo">
+                <img src="./public/images/logo/ohmyfood@2x.svg" alt="ohmyfood logo">
             </a>
         <!-- </div> -->
         <nav>
@@ -140,7 +149,7 @@
                     <a href="#">Mentions légales</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="mailto:kanekonatesangare@gmail.com">Contact</a>
                 </li>
             </ul>
         </nav>
