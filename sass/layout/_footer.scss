@@ -1,9 +1,7 @@
 footer{
-    // position: fixed;
-    // bottom: 0%;
     width: 100%;
     background-color: $dark-gray;
-    height: 20rem;
+    min-height: 10rem;
     padding: 30px;
 
     #footer-logo img{
@@ -21,6 +19,16 @@ footer{
             i{
                 margin-right: 8px;
             }
+        }
+    }
+
+    @include desktop-only{
+        display: flex;
+        justify-content: space-between;
+        nav{
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
         }
     }
 }

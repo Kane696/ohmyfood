@@ -65,7 +65,7 @@
         #fonctionnement{
             display: flex;
             flex-direction: column;
-            height: 400px;
+            min-height: 200px;
             padding: 50px 20px;
 
             h2{
@@ -73,21 +73,24 @@
                 margin-bottom: 20px;
             }
             .fonctionnement-container{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: space-between;
+                width: 100%;
                 height: 100%;
                 .card-fonctionnement{
                     background-color: $light-gray;
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
-                    height: 30%;
+                    height: 80px;
                     border-radius: 20px;
                     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
                     position: relative;
+                    margin-bottom: 20px;
                     &:hover{
-                        background-color: $primary-color;
+                        background-color: rgba(200, 103, 219, .5);
+                        opacity: .7;
                     }
                     &__circle{
                         width: 30px;
@@ -187,6 +190,16 @@
         .restaurants-container{
             display: flex;
             justify-content: space-between;
+        }
+
+        .fonctionnement-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .card-fonctionnement{
+            min-width: 390px;
         }
     }
 }

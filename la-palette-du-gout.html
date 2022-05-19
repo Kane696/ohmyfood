@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/normalize.css">
+    <!-- <link rel="stylesheet" href="public/css/normalize.css"> -->
     <link rel="stylesheet" href="public/css/style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,9 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap" rel="stylesheet">
     <title>ohmyfood</title>
 </head>
-<body>
+<body class="restaurant">
     <header>
-        <a href="index.html">
+        <a href="index.html" class="header-icon">
             <i class="fa-solid fa-arrow-left"></i>
         </a>
         <a href="#" id="logo">
@@ -31,7 +31,7 @@
                 <i class="fa-solid fa-heart"></i>
             </div>
             <!-- ENTREE -->
-            <div class="entrees">
+            <div class="entrees" id="entree">
                 <h2>ENTREES</h2>
                 <div class="entrees-container">
                     <div class="card-menu">
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <!-- PLATS -->
-            <div class="entrees">
+            <div class="entrees" id="plat">
                 <h2>PLATS</h2>
                 <div class="entrees-container">
                     <div class="card-menu">
@@ -115,7 +115,7 @@
                 </div>
             </div>
             <!-- DESSERTS -->
-            <div class="entrees">
+            <div class="entrees" id="dessert">
                 <h2>DESSERTS</h2>
                 <div class="entrees-container">
                     <div class="card-menu">
@@ -156,13 +156,13 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">Commander</a>
+            <a href="#" class="btn menu-book__btn">Commander</a>
         </section>
     </main>
     <footer>
         <!-- <div> -->
             <a href="#" id="footer-logo">
-                <img src="./public/images/logo/ohmyfood@2x.svg" style="color: white;" alt="ohmyfood logo">
+                <img src="./public/images/logo/ohmyfood@2x.svg" alt="ohmyfood logo">
             </a>
         <!-- </div> -->
         <nav>
@@ -175,11 +175,13 @@
                     <i class="fa-solid fa-handshake-angle"></i>
                     <a href="#">Devenir partenaire</a>
                 </li>
+            </ul>
+            <ul>
                 <li>
                     <a href="#">Mentions légales</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="mailto:kanekonatesangare@gmail.com">Contact</a>
                 </li>
             </ul>
         </nav>

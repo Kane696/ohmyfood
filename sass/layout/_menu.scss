@@ -8,6 +8,7 @@
 
 .menu-restaurant{
     height: calc(100vh - 7rem + 20rem);
+    // height: 80%;
     .menu{
         background-color: $light-gray;
         width: 100%;
@@ -21,6 +22,17 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            i{
+                font-size: 2.4rem;
+                font-weight: lighter;
+                transition: all .2s ease-in-out;
+                &:hover{
+                    font-weight: bolder;
+                    background: linear-gradient($primary-color, $secondary-color);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
         }
         .entrees{
             height: 350px;
