@@ -173,16 +173,12 @@ footer ul li i {
   object-fit: cover;
 }
 
-.menu-restaurant {
-  height: calc(100vh - 7rem + 20rem);
-}
 .menu-restaurant .menu {
   background-color: #f6f6f6;
   width: 100%;
-  min-height: 85%;
   padding: 20px 5%;
-  position: absolute;
-  top: 300px;
+  position: relative;
+  top: -50px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
