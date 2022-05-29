@@ -173,11 +173,14 @@ footer ul li i {
   object-fit: cover;
 }
 
-.menu-restaurant .menu {
+.menu-restaurant {
   background-color: #f6f6f6;
+}
+.menu-restaurant .menu {
   width: 100%;
   padding: 20px 5%;
   position: relative;
+  background-color: #f6f6f6;
   top: -50px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -189,8 +192,8 @@ footer ul li i {
   align-items: center;
 }
 .menu-restaurant .menu .menu-header i {
-  font-size: 2.4rem;
-  transition: font-weight 0.2s ease-in-out;
+  font-size: 3rem;
+  font-weight: lighter;
 }
 .menu-restaurant .menu .menu-header i:hover {
   cursor: pointer;
@@ -198,6 +201,8 @@ footer ul li i {
   font-weight: bolder;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 3.3rem;
+  transition: font-weight 0.4s ease-in-out, font-size 0.4s ease-in-out;
 }
 .menu-restaurant .menu .entrees {
   height: 350px;
@@ -435,7 +440,7 @@ footer ul li i {
   border-radius: 15px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  transition: all 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .accueil #restaurants .restaurants-container .card-restaurant:hover {
   transform: scale(1.009);
@@ -465,23 +470,23 @@ footer ul li i {
 .accueil #restaurants .restaurants-container .card-restaurant__icon i {
   font-weight: lighter;
   font-size: 3rem;
-  transition: all 0.2s ease-in-out;
 }
 .accueil #restaurants .restaurants-container .card-restaurant__icon i:hover {
   font-weight: bolder;
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 3.3rem;
+  transition: font-weight 0.4s ease-in-out, font-size 0.8s ease-in-out;
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
   .accueil .restaurants-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .accueil .card-restaurant {
-    min-width: 300px;
-    background-color: red;
+  .accueil .restaurants-container a {
+    width: 48%;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -492,6 +497,14 @@ footer ul li i {
   }
   .accueil .card-fonctionnement {
     min-width: 390px;
+  }
+  .accueil .restaurants-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .accueil .restaurants-container a {
+    width: 24%;
   }
 }
 

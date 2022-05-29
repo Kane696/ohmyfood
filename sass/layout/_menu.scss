@@ -8,11 +8,12 @@
 }
 
 .menu-restaurant{
+    background-color: $light-gray;
     .menu{
-        background-color: $light-gray;
         width: 100%;
         padding: 20px 5%;
         position: relative;
+        background-color: $light-gray;
         top: -50px;
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
@@ -22,15 +23,16 @@
             justify-content: space-between;
             align-items: center;
             i{
-                font-size: 2.4rem;
-                // font-weight: lighter;
-                transition: font-weight .2s ease-in-out;
+                font-size: 3rem;
+                font-weight: lighter;
                 &:hover{
                     cursor: pointer;
                     background: linear-gradient($primary-color, $secondary-color);
                     font-weight: bolder;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
+                    font-size: 3.3rem;
+                    transition: font-weight .4s ease-in-out, font-size .4s ease-in-out;
                 }
             }
         }

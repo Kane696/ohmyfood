@@ -1,7 +1,6 @@
 @import "../utils/variables";
 
 .accueil{
-    // @include mobile-only{
         #localisation{
             height: 60px;
             display: flex;
@@ -23,7 +22,6 @@
             align-items: center;
             text-align: center;
             h1{
-                // font-size: 2.8rem;
                 margin-bottom: 18px;
             }
             p{
@@ -73,9 +71,6 @@
                 margin-bottom: 20px;
             }
             .fonctionnement-container{
-                // display: flex;
-                // flex-direction: column;
-                // justify-content: space-between;
                 width: 100%;
                 height: 100%;
                 .card-fonctionnement{
@@ -134,19 +129,13 @@
                 margin-bottom: 20px;
             }
             .restaurants-container{
-                // display: flex;
-                // flex-wrap: wrap;
-                // flex-direction: column;
-                // justify-content: space-between;
-                // min-height: 80%;
                 min-height: 300px;
-                // gap: 25px;
                 .card-restaurant{
                     background-color: white;
                     border-radius: 15px;
                     box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
                     margin-bottom: 20px;
-                    transition: all .3s ease-in-out;
+                    transition: .2s ease-in-out;
                     &:hover{
                         transform: scale(1.009);
                         box-shadow: 0 10px 15px -3px rgb(0 0 0 / .3), 0 4px 6px -4px rgb(0 0 0 / .3);
@@ -176,29 +165,28 @@
                     &__icon i{
                         font-weight: lighter;
                         font-size: 3rem;
-                        transition: all .2s ease-in-out;
                         &:hover{
                             font-weight: bolder;
                             background: linear-gradient($primary-color, $secondary-color);
                             -webkit-background-clip: text;
                             -webkit-text-fill-color: transparent;
+                            font-size: 3.3rem;
+                            transition: font-weight .4s ease-in-out, font-size .8s ease-in-out;
                         }
                     }
                 }
             }
         }
-    // }
 
     @include tablet-only{
         .restaurants-container{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-        }
 
-        .card-restaurant{
-            min-width: 300px;
-            background-color: red;
+            a{
+                width: 48%;
+            }
         }
     }
 
@@ -212,6 +200,16 @@
 
         .card-fonctionnement{
             min-width: 390px;
+        }
+
+        .restaurants-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            a{
+                width: 24%;
+            }
         }
     }
 }
