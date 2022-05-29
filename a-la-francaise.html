@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="public/css/normalize.css"> -->
+    <link rel="shortcut icon" href="public/images/logo/ohmyfood@favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="public/css/style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,7 +14,7 @@
 </head>
 <body class="restaurant">
     <header>
-        <a href="index.html">
+        <a href="index.html" class="arrow-back">
             <i class="fa-solid fa-arrow-left"></i>
         </a>
         <a href="#" id="logo">
@@ -30,129 +30,131 @@
                 <h1>A la française</h1>
                 <i class="fa-solid fa-heart"></i>
             </div>
-            <!-- ENTREE -->
-            <div class="entrees">
-                <h2>ENTREES</h2>
-                <div class="entrees-container">
-                    <div class="card-menu">
-                        <div class="card-menu__plat">
-                            <h3>Tartare de poulpe acidulé</h3>
-                            <div class="card-top">
-                                <p>Aux zestes d'orange</p>
-                                <p>25€</p>
+            <div class="plats-container">
+                <!-- ENTREE -->
+                <div class="entrees">
+                    <h2>ENTREES</h2>
+                    <div class="entrees-container">
+                        <div class="card-menu">
+                            <div class="card-menu__plat">
+                                <h3>Tartare de poulpe acidulé</h3>
+                                <div class="card-top">
+                                    <p>Aux zestes d'orange</p>
+                                    <p>25€</p>
+                                </div>
                             </div>
+                            <button type="button" class="card-menu__btn">
+                                <i class="fa-solid fa-circle-check fa-spin"></i>
+                            </button>
                         </div>
-                        <button type="button" class="card-menu__btn">
-                            <i class="fa-solid fa-circle-check fa-spin"></i>
-                        </button>
-                    </div>
-                    <div class="card-menu">
-                        <div class="card-menu__plat">
-                            <h3>Velouté de légumes d'antan</h3>
-                            <div class="card-top">
-                                <p>Carotte, panais, topinambour</p>
-                                <p>35€</p>
+                        <div class="card-menu">
+                            <div class="card-menu__plat">
+                                <h3>Velouté de légumes d'antan</h3>
+                                <div class="card-top">
+                                    <p>Carotte, panais, topinambour</p>
+                                    <p>35€</p>
+                                </div>
                             </div>
+                            <button type="button" class="card-menu__btn">
+                                <i class="fa-solid fa-circle-check fa-spin"></i>
+                            </button>
                         </div>
-                        <button type="button" class="card-menu__btn">
-                            <i class="fa-solid fa-circle-check fa-spin"></i>
-                        </button>
-                    </div>
-                    <div class="card-menu">
-                        <div class="card-menu__plat">
-                            <h3>Soupe à l'oignon</h3>
-                            <div class="card-top">
-                                <p>Revisitée</p>
-                                <p>20€</p>
+                        <div class="card-menu">
+                            <div class="card-menu__plat">
+                                <h3>Soupe à l'oignon</h3>
+                                <div class="card-top">
+                                    <p>Revisitée</p>
+                                    <p>20€</p>
+                                </div>
                             </div>
+                            <button type="button" class="card-menu__btn">
+                                <i class="fa-solid fa-circle-check fa-spin"></i>
+                            </button>
                         </div>
-                        <button type="button" class="card-menu__btn">
-                            <i class="fa-solid fa-circle-check fa-spin"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- PLATS -->
-            <div class="entrees">
-                <h2>PLATS</h2>
-                <div class="entrees-container">
-                    <div class="card-menu">
-                        <div class="card-menu__plat">
-                            <h3>Coquilles Saint-Jacques</h3>
-                            <div class="card-top">
-                                <p>Accompagnées d'une purée de panais</p>
-                                <p>40€</p>
-                            </div>
-                        </div>
-                        <button type="button" class="card-menu__btn">
-                            <i class="fa-solid fa-circle-check fa-spin"></i>
-                        </button>
-                    </div>
-                    <div class="card-menu">
-                        <div class="card-menu__plat">
-                            <h3>Magret de canard</h3>
-                            <div class="card-top">
-                                <p>Et parmentier de pommes de terre</p>
-                                <p>35€</p>
-                            </div>
-                        </div>
-                        <button type="button" class="card-menu__btn">
-                            <i class="fa-solid fa-circle-check fa-spin"></i>
-                        </button>
-                    </div>
-                    <div class="card-menu">
-                        <div class="card-menu__plat">
-                            <h3>Pigeonneau d’Ille-et-Vilaine</h3>
-                            <div class="card-top">
-                                <p>Sur son lit de gnocchis aux légumes</p>
-                                <p>44€</p>
-                            </div>
-                        </div>
-                        <button type="button" class="card-menu__btn">
-                            <i class="fa-solid fa-circle-check fa-spin"></i>
-                        </button>
                     </div>
                 </div>
-            </div>
-            <!-- DESSERTS -->
-            <div class="entrees">
-                <h2>DESSERTS</h2>
-                <div class="entrees-container">
-                    <div class="card-menu">
-                        <div class="card-menu__plat">
-                            <h3>Pétales de violettes glacés</h3>
-                            <div class="card-top">
-                                <p>Et purée de noisettes</p>
-                                <p>18€</p>
+                <!-- PLATS -->
+                <div class="entrees">
+                    <h2>PLATS</h2>
+                    <div class="entrees-container">
+                        <div class="card-menu">
+                            <div class="card-menu__plat">
+                                <h3>Coquilles Saint-Jacques</h3>
+                                <div class="card-top">
+                                    <p>Accompagnées d'une purée de panais</p>
+                                    <p>40€</p>
+                                </div>
                             </div>
+                            <button type="button" class="card-menu__btn">
+                                <i class="fa-solid fa-circle-check fa-spin"></i>
+                            </button>
                         </div>
-                        <button type="button" class="card-menu__btn">
-                            <i class="fa-solid fa-circle-check fa-spin"></i>
-                        </button>
+                        <div class="card-menu">
+                            <div class="card-menu__plat">
+                                <h3>Magret de canard</h3>
+                                <div class="card-top">
+                                    <p>Et parmentier de pommes de terre</p>
+                                    <p>35€</p>
+                                </div>
+                            </div>
+                            <button type="button" class="card-menu__btn">
+                                <i class="fa-solid fa-circle-check fa-spin"></i>
+                            </button>
+                        </div>
+                        <div class="card-menu">
+                            <div class="card-menu__plat">
+                                <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                                <div class="card-top">
+                                    <p>Sur son lit de gnocchis aux légumes</p>
+                                    <p>44€</p>
+                                </div>
+                            </div>
+                            <button type="button" class="card-menu__btn">
+                                <i class="fa-solid fa-circle-check fa-spin"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="card-menu">
-                        <div class="card-menu__plat">
-                            <h3>Fondant au chocolat</h3>
-                            <div class="card-top">
-                                <p>Revisité</p>
-                                <p>22€</p>
+                </div>
+                <!-- DESSERTS -->
+                <div class="entrees">
+                    <h2>DESSERTS</h2>
+                    <div class="entrees-container">
+                        <div class="card-menu">
+                            <div class="card-menu__plat">
+                                <h3>Pétales de violettes glacés</h3>
+                                <div class="card-top">
+                                    <p>Et purée de noisettes</p>
+                                    <p>18€</p>
+                                </div>
                             </div>
+                            <button type="button" class="card-menu__btn">
+                                <i class="fa-solid fa-circle-check fa-spin"></i>
+                            </button>
                         </div>
-                        <button type="button" class="card-menu__btn">
-                            <i class="fa-solid fa-circle-check fa-spin"></i>
-                        </button>
-                    </div>
-                    <div class="card-menu">
-                        <div class="card-menu__plat">
-                            <h3>Millefeuille croustillant</h3>
-                            <div class="card-top">
-                                <p>Myrtilles et pâte d’amande</p>
-                                <p>23€</p>
+                        <div class="card-menu">
+                            <div class="card-menu__plat">
+                                <h3>Fondant au chocolat</h3>
+                                <div class="card-top">
+                                    <p>Revisité</p>
+                                    <p>22€</p>
+                                </div>
                             </div>
+                            <button type="button" class="card-menu__btn">
+                                <i class="fa-solid fa-circle-check fa-spin"></i>
+                            </button>
                         </div>
-                        <button type="button" class="card-menu__btn">
-                            <i class="fa-solid fa-circle-check fa-spin"></i>
-                        </button>
+                        <div class="card-menu">
+                            <div class="card-menu__plat">
+                                <h3>Millefeuille croustillant</h3>
+                                <div class="card-top">
+                                    <p>Myrtilles et pâte d’amande</p>
+                                    <p>23€</p>
+                                </div>
+                            </div>
+                            <button type="button" class="card-menu__btn">
+                                <i class="fa-solid fa-circle-check fa-spin"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
