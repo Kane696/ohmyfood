@@ -135,8 +135,10 @@
             }
             .restaurants-container{
                 // display: flex;
+                // flex-wrap: wrap;
                 // flex-direction: column;
                 // justify-content: space-between;
+                // min-height: 80%;
                 min-height: 300px;
                 // gap: 25px;
                 .card-restaurant{
@@ -186,12 +188,22 @@
             }
         }
     // }
-    @include desktop-only{
+
+    @include tablet-only{
         .restaurants-container{
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
         }
 
+        .card-restaurant{
+            min-width: 300px;
+            background-color: red;
+        }
+    }
+
+
+    @include desktop-only{
         .fonctionnement-container{
             display: flex;
             flex-direction: row;
