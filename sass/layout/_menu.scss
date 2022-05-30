@@ -36,7 +36,7 @@
                 }
             }
         }
-        .entrees{
+        .menu-dishes{
             height: 350px;
             padding: 20px 0px;
             height: 100%;
@@ -48,7 +48,7 @@
                 width: 40px;
                 margin-bottom: 20px;
             }
-            .entrees-container{
+            &__container{
                 display: flex;
                 flex-direction: column;
                 .card-menu{
@@ -65,14 +65,18 @@
                     animation: .8s forwards fadein;
                     opacity: 0;
                     &:nth-child(1){
-                        animation-delay:.5s;
+                        animation-delay:.3s;
                     }
                     &:nth-child(2){
-                        animation-delay: .7s;
+                        animation-delay: .5s;
                     }
                     &:nth-child(3){
+                        animation-delay: .7s;
+                    }
+                    &:nth-child(4){
                         animation-delay: .9s;
                     }
+
                     @keyframes fadein {
                         0% {
                             transform: translateY(15px);
@@ -87,7 +91,7 @@
                         .card-menu__btn{
                             display: block;
                         }
-                        .card-menu__plat{
+                        .card-menu__dish{
                             animation: slideoff .3s forwards;
                             h3{
                                 white-space: nowrap;
@@ -103,7 +107,7 @@
                             }
                         }
     
-                        @keyframes slideoff {
+                        @include keyframes(slideoff){
                             0%{
                                 width: 90%;
                             }
@@ -122,7 +126,7 @@
                             }
                         }
                     }
-                    .card-menu__plat{
+                    .card-menu__dish{
                         display: flex;                    
                         flex-direction: column;
                         justify-content: center;
@@ -146,7 +150,7 @@
     }
 
     @include desktop-only{
-        .plats-container{
+        .menu-body{
             display: flex;
             justify-content: space-between;
         }

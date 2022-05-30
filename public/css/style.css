@@ -26,6 +26,17 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+body.accueil h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.8rem;
+}
+
+body.restaurant h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
 .btn {
   display: block;
   margin: 0px auto;
@@ -69,6 +80,7 @@ body {
   background-color: #99E2D0;
   height: 100%;
   border: none;
+  cursor: pointer;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   animation: slidein 0.3s forwards;
@@ -80,6 +92,40 @@ body {
   --fa-animation-iteration-count: 1;
 }
 
+@-webkit-keyframes slidein {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 5%;
+  }
+  50% {
+    width: 10%;
+  }
+  75% {
+    width: 15%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@-moz-keyframes slidein {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 5%;
+  }
+  50% {
+    width: 10%;
+  }
+  75% {
+    width: 15%;
+  }
+  100% {
+    width: 20%;
+  }
+}
 @keyframes slidein {
   0% {
     width: 0%;
@@ -204,12 +250,12 @@ footer ul li i {
   font-size: 3.3rem;
   transition: font-weight 0.4s ease-in-out, font-size 0.4s ease-in-out;
 }
-.menu-restaurant .menu .entrees {
+.menu-restaurant .menu .menu-dishes {
   height: 350px;
   padding: 20px 0px;
   height: 100%;
 }
-.menu-restaurant .menu .entrees h2 {
+.menu-restaurant .menu .menu-dishes h2 {
   font-weight: lighter;
   font-size: 1.7rem;
   border-bottom: 3px solid #99E2D0;
@@ -217,11 +263,11 @@ footer ul li i {
   width: 40px;
   margin-bottom: 20px;
 }
-.menu-restaurant .menu .entrees .entrees-container {
+.menu-restaurant .menu .menu-dishes__container {
   display: flex;
   flex-direction: column;
 }
-.menu-restaurant .menu .entrees .entrees-container .card-menu {
+.menu-restaurant .menu .menu-dishes__container .card-menu {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -235,13 +281,16 @@ footer ul li i {
   animation: 0.8s forwards fadein;
   opacity: 0;
 }
-.menu-restaurant .menu .entrees .entrees-container .card-menu:nth-child(1) {
+.menu-restaurant .menu .menu-dishes__container .card-menu:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.menu-restaurant .menu .menu-dishes__container .card-menu:nth-child(2) {
   animation-delay: 0.5s;
 }
-.menu-restaurant .menu .entrees .entrees-container .card-menu:nth-child(2) {
+.menu-restaurant .menu .menu-dishes__container .card-menu:nth-child(3) {
   animation-delay: 0.7s;
 }
-.menu-restaurant .menu .entrees .entrees-container .card-menu:nth-child(3) {
+.menu-restaurant .menu .menu-dishes__container .card-menu:nth-child(4) {
   animation-delay: 0.9s;
 }
 @keyframes fadein {
@@ -254,21 +303,55 @@ footer ul li i {
     opacity: 1;
   }
 }
-.menu-restaurant .menu .entrees .entrees-container .card-menu:hover .card-menu__btn {
+.menu-restaurant .menu .menu-dishes__container .card-menu:hover .card-menu__btn {
   display: block;
 }
-.menu-restaurant .menu .entrees .entrees-container .card-menu:hover .card-menu__plat {
+.menu-restaurant .menu .menu-dishes__container .card-menu:hover .card-menu__dish {
   animation: slideoff 0.3s forwards;
 }
-.menu-restaurant .menu .entrees .entrees-container .card-menu:hover .card-menu__plat h3 {
+.menu-restaurant .menu .menu-dishes__container .card-menu:hover .card-menu__dish h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu-restaurant .menu .entrees .entrees-container .card-menu:hover .card-menu__plat .card-top p:first-child {
+.menu-restaurant .menu .menu-dishes__container .card-menu:hover .card-menu__dish .card-top p:first-child {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@-webkit-keyframes slideoff {
+  0% {
+    width: 90%;
+  }
+  25% {
+    width: 87.5%;
+  }
+  50% {
+    width: 85%;
+  }
+  75% {
+    width: 82.5%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@-moz-keyframes slideoff {
+  0% {
+    width: 90%;
+  }
+  25% {
+    width: 87.5%;
+  }
+  50% {
+    width: 85%;
+  }
+  75% {
+    width: 82.5%;
+  }
+  100% {
+    width: 80%;
+  }
 }
 @keyframes slideoff {
   0% {
@@ -287,18 +370,18 @@ footer ul li i {
     width: 80%;
   }
 }
-.menu-restaurant .menu .entrees .entrees-container .card-menu .card-menu__plat {
+.menu-restaurant .menu .menu-dishes__container .card-menu .card-menu__dish {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
   padding-right: 20px;
 }
-.menu-restaurant .menu .entrees .entrees-container .card-menu .card-menu__plat .card-top {
+.menu-restaurant .menu .menu-dishes__container .card-menu .card-menu__dish .card-top {
   display: flex;
   justify-content: space-between;
 }
-.menu-restaurant .menu .entrees .entrees-container .card-menu .card-menu__plat .card-top p:first-child {
+.menu-restaurant .menu .menu-dishes__container .card-menu .card-menu__dish .card-top p:first-child {
   font-size: 1.4rem;
   font-weight: lighter;
 }
@@ -306,10 +389,21 @@ footer ul li i {
   width: 160px;
 }
 @media only screen and (min-width: 1024px) {
-  .menu-restaurant .plats-container {
+  .menu-restaurant .menu-body {
     display: flex;
     justify-content: space-between;
   }
+}
+
+body.accueil h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.8rem;
+}
+
+body.restaurant h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2.8rem;
+  font-weight: 500;
 }
 
 .accueil #localisation {
@@ -347,19 +441,170 @@ footer ul li i {
   text-align: center;
   line-height: 100vh;
   background-color: #fff;
-  animation: 2s loader forwards;
-  animation-duration: 2s;
   z-index: 9999;
+  animation: loader 4s 5s forwards;
 }
-.accueil #loader i {
-  --fa-animation-duration: 2s;
-  --fa-animation-iteration-count: 1;
+.accueil #loader .loader-container .bowl-food {
+  animation: food-loader-1 3s 0s ease-in;
 }
-@keyframes loader {
+@-webkit-keyframes food-loader-1 {
   0% {
+    transform: translateX(200%);
     opacity: 1;
   }
   50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+}
+@-moz-keyframes food-loader-1 {
+  0% {
+    transform: translateX(200%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+}
+@keyframes food-loader-1 {
+  0% {
+    transform: translateX(200%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+}
+.accueil #loader .loader-container .burger {
+  animation: food-loader-2 3s 1s ease-in;
+}
+@-webkit-keyframes food-loader-2 {
+  0% {
+    transform: translateX(200%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+}
+@-moz-keyframes food-loader-2 {
+  0% {
+    transform: translateX(200%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+}
+@keyframes food-loader-2 {
+  0% {
+    transform: translateX(200%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+}
+.accueil #loader .loader-container .pizza-slice {
+  animation: food-loader-3 3s 2s ease-in;
+}
+@-webkit-keyframes food-loader-3 {
+  0% {
+    transform: translateX(200%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+}
+@-moz-keyframes food-loader-3 {
+  0% {
+    transform: translateX(200%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+}
+@keyframes food-loader-3 {
+  0% {
+    transform: translateX(200%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+}
+.accueil #loader .loader-container i {
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@-moz-keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes loader {
+  0% {
     opacity: 1;
   }
   100% {

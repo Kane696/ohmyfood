@@ -1,4 +1,5 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 
 .accueil{
         #localisation{
@@ -38,21 +39,32 @@
             text-align: center;
             line-height: 100vh;
             background-color: #fff;
-            animation: 2s loader forwards;
-            animation-duration: 2s;
             z-index: 9999;
-            i{
-                --fa-animation-duration: 2s;
-                --fa-animation-iteration-count: 1;
+            animation: loader 4s 5s forwards;
+            .loader-container{
+                $duration: 3;
+                $delay: $duration / 3;
+                .bowl-food{
+                    @include food-loader(1, $duration, 0);
+                }
+                .burger{
+                    @include food-loader(2, $duration, $delay);
+                }
+                .pizza-slice{
+                    @include food-loader(3, $duration, $delay * 2);
+                }
+                i{
+                    background: linear-gradient($primary-color, $secondary-color);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    opacity: 0;
+                }
             }
 
-            @keyframes loader {
+            @include keyframes(loader){
                 0%{
                     opacity: 1;
                 } 
-                50%{
-                    opacity: 1;
-                }
                 100%{
                     opacity: 0;
                     z-index: -1;

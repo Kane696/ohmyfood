@@ -1,3 +1,4 @@
+// Define breakpoints
 $breakpoints:(
     mobile: 767px,
     tablet: 768px,
@@ -28,4 +29,69 @@ $page_font: (accueil: $roboto-sans, restaurant: $shrikhand);
             }
         }
     }
+}
+
+
+// Animation
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name}{
+        @content;
+    }
+
+    @-moz-keyframes #{$name}{
+        @content;
+    }
+
+    @keyframes #{$name}{
+        @content;
+    }
+}
+
+
+@mixin food-loader($id, $duration, $delay){
+    @-webkit-keyframes food-loader-#{$id}{
+        0%{
+            transform: translateX(200%);
+            opacity: 1;
+        } 
+        50%{
+            transform: translateX(0);
+            opacity: 1;
+        }
+        100%{
+            transform: translateX(-200%);
+            opacity: 0;
+        }
+    }
+
+    @-moz-keyframes food-loader-#{$id}{
+        0%{
+            transform: translateX(200%);
+            opacity: 1;
+        } 
+        50%{
+            transform: translateX(0);
+            opacity: 1;
+        }
+        100%{
+            transform: translateX(-200%);
+            opacity: 0;
+        }
+    }
+
+    @keyframes food-loader-#{$id}{
+        0%{
+            transform: translateX(200%);
+            opacity: 1;
+        } 
+        50%{
+            transform: translateX(0);
+            opacity: 1;
+        }
+        100%{
+            transform: translateX(-200%);
+            opacity: 0;
+        }
+    }
+    animation: food-loader-#{$id} $duration+s $delay+s ease-in;
 }
